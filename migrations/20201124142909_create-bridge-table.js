@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema
         .createTable('recipe_ingredients', tbl => {
-            tbl.text('quantity').notNullable();
+            tbl.float('quantity').notNullable();
             tbl.text('measurement', 128).notNullable();
             tbl.integer('recipe_id')
                 .unsigned()
